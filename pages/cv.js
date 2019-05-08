@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
-class Index extends Component {
+class Cv extends Component {
 
   render() {
     return (
-      <div>Index page</div>
+      <div>
+        Cv
+      </div>
     );
   }
 }
 
-export default Index;
+export default Cv;
