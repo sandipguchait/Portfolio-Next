@@ -1,13 +1,14 @@
 
 import React, { Component } from 'react';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class About extends Component {
 
   render() {
     return (
-      <div>
+      <BaseLayout>
         about page
-      </div>
+      </BaseLayout>
     );
   }
 }

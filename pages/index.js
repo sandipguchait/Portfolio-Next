@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class Index extends Component {
 
   render() {
     return (
-      <div>Index page</div>
+      <BaseLayout>
+        <h1>I am index Page</h1> 
+      </BaseLayout>
     );
   }
 }
