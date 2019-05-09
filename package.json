@@ -42,7 +42,7 @@
     "react-dom": "*",
     "react-emotion": "*",
     "react-toastify": "*",
-    "react-typed": "*",
+    "react-typed": "^1.1.2",
     "reactstrap": "^8.0.0",
     "slate": "*",
     "slate-html-serializer": "*",
