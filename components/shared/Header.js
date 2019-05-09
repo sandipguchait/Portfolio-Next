@@ -58,9 +58,6 @@ export default class Example extends React.Component {
               <NavItem className="port-navbar-item" >
                 <HNavLink route="/portfolio" title="Portfolio" />
               </NavItem>
-              <NavItem className="port-navbar-item" > 
-                <HNavLink route="/blogs" title="Blog" />
-              </NavItem>
               <NavItem className="port-navbar-item" >
                 <HNavLink route="/cv" title="CV" />
               </NavItem>
