@@ -6,12 +6,29 @@ import Typed from 'react-typed';
 
 class Index extends Component {
   state = {
-    roles: ['Developer', 'Tech Lover', 'Team Player', 'ReactJs', 'GraphQL']
+    roles: ['Developer', 'Tech Lover', 'Team Player', 'ReactJs', 'GraphQL'],
+    isFlipping: false
+  };
+
+  componentDidMount(){
+    this.rotateCard();
+  };
+
+  componentWillUnmount(){
+    this.animationInterval && clearInterval(this.animationInterval);
+  };
+
+  rotateCard = () => {
+    this.animationInterval = setInterval(() => {
+      this.setState({ isFlipping: !this.state.isFlipping})
+    }, 3000)
   }
 
   render() {
+    const { isFlipping } = this.state;
+
     return (
-      <BaseLayout className="cover" headerType="index">
+      <BaseLayout className={`cover ${isFlipping ? 'cover-1' : 'cover-0'}`} headerType="index">
       <div className="main-section">
         <div className="background-image">
           <img src="/static/images/background-index.png.png" />
@@ -21,8 +38,8 @@ class Index extends Component {
           <Row>
             <Col md="6">
               <div className="hero-section">
-                <div className={`flipper`}>
-                  <div className="back">
+                <div className={`flipper ${isFlipping ? 'isFlipping' : ''}`}>
+                  <div className="front">
                     <div className="hero-section-content">
                       <h2> FrontEnd Web Developer </h2>
                       <div className="hero-section-content-intro">
@@ -31,6 +48,18 @@ class Index extends Component {
                     </div>
                     <img className="image" src="/static/images/section-1.png.png"/>
                     <div className="shadow-custom">
+                      <div className="shadow-inner"> </div>
+                    </div>
+                  </div>
+                  <div className="back">
+                    <div className="hero-section-content">
+                      <h2> Technical Writer </h2>
+                      <div className="hero-section-content-intro">
+                        Contributing Tutorials on Medium.
+                      </div>
+                    </div>
+                    <img className="image" src="/static/images/section-2.png.png"/>
+                    <div className="shadow-custom shadow-custom-2 " >
                       <div className="shadow-inner"> </div>
                     </div>
                   </div>

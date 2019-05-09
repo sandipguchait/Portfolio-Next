@@ -38,9 +38,13 @@ export default class Example extends React.Component {
   }
   render() {
     const { className } = this.props;
+    const { isOpen } = this.state;
+
+    const menuOpenClass = isOpen ? 'menu-open' : 'menu-close';
+
     return (
       <div>
-        <Navbar className={`port-navbar port-nav-base absolute ${className}`} color="transperant" dark expand="md">
+        <Navbar className={`port-navbar port-nav-base absolute ${className} ${menuOpenClass}`} color="transparent" dark expand="md">
           <NavbarBrand className="port-navbar-brand" href="/">Sandip Guchait</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
