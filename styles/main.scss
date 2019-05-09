@@ -1,9 +1,11 @@
 @import './fonts';
 
-.customclass {
-  color: blue
-}
+//Pages
+@import './index';
+
 
 html, body {
-  font-family: 'Montserrat', 'Helvetica' ;
+  height:100%;
+  width:100%;
+  font-family: 'Montserrat', 'Helvetica';
 }
