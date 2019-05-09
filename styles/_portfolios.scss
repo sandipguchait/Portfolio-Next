@@ -7,32 +7,26 @@
   background-color: $base-page-white;
 
   .portfolio-card {
-    background-image: linear-gradient(45deg, #4e54c8 0%, #8f94fb 100%);
+    background-image: linear-gradient(45deg, #3f47e2 0%, #979cf5 100%);
     border: none;
     color: white;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    margin-right: 10px;
 
     &:hover {
       cursor: pointer;
       transform: translateY(-5px);
     }
 
-    &:hover .readMore:before {
-      background: linear-gradient(to right, #ffffff 0%,#ffffff 100%);
-    }
-
     &-header {
-      padding: 3px;
+      padding: 1px;
       padding-right: 7px;
       text-align: right;
       text-transform: uppercase;
       font-weight: 600;
       font-size: 17px;
-    }
-
-    &-city {
-
     }
 
     &-title {
@@ -51,6 +45,14 @@
       margin-bottom: 50px;
     }
   }
+}
+
+.cardlink {
+  color: white;
+}
+
+.cardlink:hover {
+  color: white;
 }
 
 // --------- PORTFOLIO PAGE -------------

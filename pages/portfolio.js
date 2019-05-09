@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
 import BasePage from '../components/BasePage';
-import axios from 'axios';
-import { Col, Row, Card, CardHeader, CardBody, CardText, CardTitle } from 'reactstrap';
+import { Col, Row, Card, CardHeader, CardBody, CardText, CardTitle , CardLink, Button, CardImg} from 'reactstrap';
+
 
 class Portfolio extends Component {
 
-  static async getInitialProps(){
-    let posts = [];
+  state = {
+    projects: [
+     {id:1 , Github:'https://github.com/sandipguchait/travel-guide', name: 'TravelGuide', image:'/static/images/TravelGuide.JPG' } ,
+     {id:2 , Github:'https://github.com/sandipguchait/cryptostats', name: 'CrypToStats', image:'/static/images/cryptostats.JPG'} ,
+     {id:3 , Github:'https://github.com/sandipguchait/StoriesApp', name: 'StoriesApp', image:'/static/images/your-stories.JPG' },
+     {id:4 , Github:'https://github.com/sandipguchait/GamerConnect', name: 'GamerConnect' , image:'/static/images/gamerConnect.JPG'},
+     {id:5 , Github:'https://github.com/sandipguchait/react-blog', name: 'React Blog' , image:'/static/images/sandip-blog.JPG'} ,
+     {id:6 , Github:'https://github.com/sandipguchait/Online-Fish-Store', name: 'Fish Store' , image:'/static/images/fishstore.JPG'} ,
+     {id:7 , Github:'https://github.com/sandipguchait/Youtube_player', name: 'Youtube Web Player' , image:'/static/images/youtubeplayer.JPG'} 
+    ]
+  };
 
-    try {
-      const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-      posts = response.data;
-    } catch(err) {
-      console.error(err);
-    }
-    return { posts: posts.splice(0,9)};
-  }
-
-  renderPosts(posts) {
-    return posts.map((post, index) => {
+  renderPosts = (projects) => {
+    return projects.map((project) => {
       return (
-        <Col md="4">
-          <React.Fragment key={post.id}>
+        <Col md="4" >
+          <React.Fragment key={project.id}>
             <span>
               <Card className="portfolio-card">
-                <CardHeader className="portfolio-card-header">Some Position {index}</CardHeader>
+                <CardHeader className="portfolio-card-header">{project.name}</CardHeader>
+                <CardImg top width="100%" src={`${project.image}`} alt={`${project.name}`} />
                 <CardBody>
-                  <p className="portfolio-card-city"> Some Location {index} </p>
-                  <CardTitle className="portfolio-card-title">Some Company {index}</CardTitle>
-                  <CardText className="portfolio-card-text">Some Description {index}</CardText>
-                  <div className="readMore"> </div>
+                  <p className="portfolio-card-city">  {project.name} </p>
+                  <CardTitle className="portfolio-card-title">{project.name}</CardTitle>
+                  <Button color="primary"><CardLink className="cardlink" href={`${project.Github}`}>GitHub</CardLink></Button>
                 </CardBody>
               </Card>
             </span>
@@ -41,12 +41,12 @@ class Portfolio extends Component {
   }
 
   render() {
-    const { posts } = this.props;
+    const { projects } = this.state; 
     return (
       <BaseLayout>
         <BasePage className="portfolio-page "title="Portfolio">
           <Row>
-            {this.renderPosts(posts)}
+            {this.renderPosts(projects)}
           </Row>
         </BasePage>
       </BaseLayout>
