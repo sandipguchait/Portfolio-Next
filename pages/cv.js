@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/BasePage';
 
 class Cv extends Component {
 
   render() {
     return (
       <BaseLayout>
-        Cv
+        <BasePage>
+          Cv
+        </BasePage>
       </BaseLayout>
     );
   }
