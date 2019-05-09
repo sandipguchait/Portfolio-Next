@@ -7,8 +7,7 @@ class Portfolio extends Component {
   render() {
     return (
       <BaseLayout>
-        <BasePage>
-          Portfolio
+        <BasePage title="I am portfolio Page">
         </BasePage>
       </BaseLayout>
     );

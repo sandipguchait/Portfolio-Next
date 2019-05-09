@@ -11,7 +11,7 @@ class Index extends Component {
 
   render() {
     return (
-      <BaseLayout className="cover">
+      <BaseLayout className="cover" headerType="index">
       <div className="main-section">
         <div className="background-image">
           <img src="/static/images/background-index.png.png" />

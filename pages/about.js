@@ -8,8 +8,7 @@ class About extends Component {
   render() {
     return (
       <BaseLayout>
-        <BasePage>
-          about page
+        <BasePage className="about-page" title="I am About Page">
         </BasePage>
       </BaseLayout>
     );

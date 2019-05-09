@@ -1,33 +1,6 @@
 
-import Link from 'next/link';
-
-
-// class Header extends Component {
-
-//   render() {
-//     return (
-//       <>
-       
-//         <Link href="/about"><a>About</a></Link>
-//         <Link href="/portfolio"><a>Portfolio</a></Link>
-//         <Link href="/blogs"><a>Blog</a></Link>
-//         <Link href="/cv"><a>CV</a></Link>
-
-//         <style jsx>
-//         {`
-//           a {
-//             font-size: 20px
-//           }
-//         `}
-//         </style>
-
-//       </>
-//     );
-//   }
-// }
-// export default Header;
-
 import React from 'react';
+import Link from 'next/link';
 import {
   Collapse,
   Navbar,
@@ -37,6 +10,8 @@ import {
   NavItem,
  } from 'reactstrap';
 
+
+
  // NavLink 
  const HNavLink = (props) => {
    const { route, title } = props;
@@ -44,6 +19,8 @@ import {
     <Link href={route}><a className="nav-link port-navbar-link">{title}</a></Link>
    )
  }
+
+
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -60,9 +37,10 @@ export default class Example extends React.Component {
     }))
   }
   render() {
+    const { className } = this.props;
     return (
       <div>
-        <Navbar className="port-navbar port-default absolute" color="transperant" dark expand="md">
+        <Navbar className={`port-navbar port-nav-base absolute ${className}`} color="transperant" dark expand="md">
           <NavbarBrand className="port-navbar-brand" href="/">Sandip Guchait</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
