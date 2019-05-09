@@ -4,6 +4,10 @@ const routes = require('./routes')
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = routes.getRequestHandler(app)
+const cors = require('cors');
+
+const cross = express();
+cross.use(cors());
 
 app
   .prepare()
@@ -19,6 +23,7 @@ app
       console.log('> Ready on http://localhost:3000')
     })
   })
+  
   .catch(ex => {
     console.error(ex.stack)
     process.exit(1)
