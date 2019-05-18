@@ -39,7 +39,7 @@ class Tools extends Component {
     const { tools } = this.state; 
     return (
       <BaseLayout>
-        <BasePage className="portfolio-page "title="Portfolio">
+        <BasePage className="portfolio-page "title="Tooling">
           <Row>
             {this.renderPosts(tools)}
           </Row>
