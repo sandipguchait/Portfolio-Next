@@ -6,7 +6,7 @@ import Typed from 'react-typed';
 
 class Index extends Component {
   state = {
-    roles: ['Developer', 'Tech Lover', 'Team Player', 'ReactJs', 'GraphQL', 'AWS'],
+    roles: ['Developer', 'NodeJs', 'Team Player', 'ReactJs', 'GraphQL', 'AWS'],
     isFlipping: false
   };
 
