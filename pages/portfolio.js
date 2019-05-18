@@ -15,7 +15,8 @@ class Portfolio extends Component {
      {id:5 , Github:'https://github.com/sandipguchait/react-blog', name: 'React Blog' , image:'/static/images/sandip-blog.JPG', Demo:'https://sandipblog.netlify.com/', Date:"2018"} ,
      {id:6 , Github:'https://github.com/sandipguchait/Online-Fish-Store', name: 'Fish Store' , image:'/static/images/fishstore.JPG', Demo:'https://fishmarket.netlify.com/',Date:"2017"} ,
      {id:7 , Github:'https://github.com/sandipguchait/Youtube_player', name: 'Youtube Web Player' , image:'/static/images/youtubeplayer.JPG', Demo:'https://codesandbox.io/s/github/sandipguchait/Youtube_player', Date: "2019"},
-     {id:8 , Github:'https://github.com/sandipguchait', name: 'See More Projects' , image:'/static/images/github.png', Demo:'https://github.com/sandipguchait'},
+     {id:8 , Github:'https://github.com/sandipguchait/AWS-Shopping', name: 'AWS-Shopping' , image:'/static/images/aws-2.JPG', Demo:'https://youtu.be/XapEVG8gteU', Date: "2019"},
+     {id:9 , Github:'https://github.com/sandipguchait', name: 'See More Projects' , image:'/static/images/github.png', Demo:'https://github.com/sandipguchait'},
     ]
   };
 
